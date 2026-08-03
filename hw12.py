@@ -1,19 +1,19 @@
-data = input()
-data_list = sorted([list(map(int, i.split(","))) for i in data.split(";")])
+text = input()
+groups = text.split(";")
 
-"""
-groups = data.split(";")
-temp_list = []
-for i in groups:
-    items = i.split(",") 
-    numbers = [int(items[0]), int(items[1])] 
-    temp_list.append(numbers) 
-data_list = sorted(temp_list)
-"""
+parsed_groups = []
+for item in groups:
+    parts = item.split(",")
+    start = int(parts[0])
+    end = int(parts[1])
+    parsed_groups.append([start,end])
+parsed_groups.sort()
 
-output = []
-for start, end in data_list:
+result = []
+for pair in parsed_groups:
+    start = pair[0]
+    end = pair[1]
+
     for i in range(start, end):
-        output.append([i, i+1])
-
-print(str(output).replace(" ", ""))
+        result.append([i, i+1])
+print(result)

@@ -1,0 +1,19 @@
+สูตร Hash พื้นฐาน (Remainder Method):
+    โค้ด: slot = item % table_size
+
+(รับบรรทัดเดียว - ตัวสุดท้ายคือเป้าหมาย):
+data = list(map(int, input().split()))
+tree = [0] + data[:-1]
+target_idx = data[-1]
+
+(บรรทัดแรกชุดข้อมูล, บรรทัดสองตัวเลขเป้าหมาย):
+tree = [0] + list(map(int, input().split()))  # บรรทัดที่ 1
+target_idx = int(input())                    # บรรทัดที่ 2
+10 5 15 2 7
+5
+
+
+n = int(input())                             # บรรทัดที่ 1 (รับจำนวน n มาเฉยๆ หรือปล่อยผ่าน)
+tree = [0] + list(map(int, input().split()))  # บรรทัดที่ 2
+5
+10 5 15 2 7
